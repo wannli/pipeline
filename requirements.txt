@@ -1,5 +1,6 @@
 fastapi==0.100.0
 hypercorn==0.14.4
+pydub==0.25.1
 sqlalchemy==2.0.19
 yt-dlp==2023.7.6
 openai>=1.6.1

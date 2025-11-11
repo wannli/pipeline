@@ -22,6 +22,14 @@ This example starts up a [FastAPI](https://fastapi.tiangolo.com/) server.
 
 - Clone locally and install packages with pip using `pip install -r requirements.txt`
 - Run locally using `hypercorn main:app --reload`
+- Install [FFmpeg](https://ffmpeg.org/download.html) so `pydub` can re-encode audio chunks when calling the utilities in `services.py`.
+
+## 🔊 Audio chunking
+
+The `split_file` helper in `services.py` remuxes or re-encodes large audio files
+into ≤20&nbsp;MB chunks using `pydub`/FFmpeg to ensure each exported segment is
+playable on its own. Install FFmpeg before using this helper locally or in CI
+environments.
 
 ## 📝 Notes
 
